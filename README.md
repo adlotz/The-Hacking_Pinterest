@@ -1,24 +1,66 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## MOOCademy
 
-Things you may want to cover:
+Pour la correction, il faut commencer par clone le repo, faire un ```bundle install --without production```, faire ensuite un ```rails db:migrate``` et enfin rentrer dans la console ```rails console```
 
-* Ruby version
+Une fois dans la console, il faudra peupler la database.
 
-* System dependencies
+Comme je sais que tu es flemmard, je vais t'aider ;)
 
-* Configuration
+Etape 1 : Création d'un utilisateur
 
-* Database creation
+* ```user1 = User.new```
 
-* Database initialization
+* ```user1.username = "Anto"```
 
-* How to run the test suite
+* ```user1.save```
 
-* Services (job queues, cache servers, search engines, etc.)
+Etape 2 : Création d'un Pin
 
-* Deployment instructions
+* ```pins1 = Pin.new```
 
-* ...
+* ```pins1.url = "https://www.google.fr/search?&q=chatons+mignons"```
+
+* ```pins1.user_id = 1```
+
+* ```pins1.save```
+
+Etape 3 : Création de 2 commentaire
+
+* ```comm1 = Comment.new```
+
+* ```comm1.content = "Trop mignons ces chatons"```
+
+* ```comm1.pin_id = 1```
+
+* ```comm1.user_id = 1```
+
+* ```comm1.save```
+
+
+* ```comm2 = Comment.new```
+
+* ```comm2.content = "J'adore les chatons"```
+
+* ```comm2.pin_id = 1```
+
+* ```comm2.user_id = 1```
+
+* ```comm2.save```
+
+
+Libre a toi de créer d'autres utilisateurs, Pins ou commentaires :)
+
+Tu peux ensuite retrouver ce que tu veux facilement dans la base de donnée avec la methode where, comme ci dessous par exemple:
+
+** Les commentaires sur le pin ayant l'id 1 (le premier pin que l'on crée) **
+
+* ```Comment.where(pin_id: 1)```
+
+Tu verras les 2 commentaires que l'on a créé, car ces 2 commentaires se réferent au pin ayant l'id 1 (car comm1 et comm2 ont un pin_id égal a 1)
+
+** Retrouve tous les pins qu'a posté un utilisateur **
+
+* ```Pin.where(user_id: 1)```
+
