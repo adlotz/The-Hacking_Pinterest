@@ -54,13 +54,13 @@ Libre a toi de créer d'autres utilisateurs, Pins ou commentaires :)
 
 Tu peux ensuite retrouver ce que tu veux facilement dans la base de donnée avec la methode where, comme ci dessous par exemple:
 
-** Les commentaires sur le pin ayant l'id 1 (le premier pin que l'on crée) **
+**Les commentaires sur le pin ayant l'id 1 (le premier pin que l'on crée)**
 
 * ```Comment.where(pin_id: 1)```
 
 Tu verras les 2 commentaires que l'on a créé, car ces 2 commentaires se réferent au pin ayant l'id 1 (car comm1 et comm2 ont un pin_id égal a 1)
 
-** Retrouve tous les pins qu'a posté un utilisateur **
+**Retrouve tous les pins qu'a posté un utilisateur**
 
 * ```Pin.where(user_id: 1)```
 
