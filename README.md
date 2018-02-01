@@ -1,6 +1,6 @@
 # README
 
-## MOOCademy
+## The-Hacking-Pinterest
 
 Pour la correction, il faut commencer par clone le repo, faire un ```bundle install --without production```, faire ensuite un ```rails db:migrate``` et enfin rentrer dans la console ```rails console```
 
